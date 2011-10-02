@@ -1,3 +1,5 @@
+#! /usr/bin/python
+
 import unittest
 
 class TestBasicCalculations(unittest.TestCase):
