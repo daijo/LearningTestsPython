@@ -36,5 +36,10 @@ class TestBasicString(unittest.TestCase):
     def test_get_length(self):
          self.assertEqual(len(["1","2","3","4","5"]), 5)
 
+    def test_iterate(self):
+        for index, item in enumerate(TestBasicString.testList): # index and item, use the enumerate function
+            if index == 0: self.assertEqual(item, "APRIL")
+            if index == 3: self.assertEqual(item, "cruellest")
+
 if __name__ == '__main__':
     unittest.main()
