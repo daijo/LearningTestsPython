@@ -28,6 +28,11 @@ class TestBasicString(unittest.TestCase):
     def test_slice_invariant(self):
         self.assertEqual(TestBasicString.testList[:3] + TestBasicString.testList[3:], TestBasicString.testList)
 
+    def test_replace_slice(self):
+        result = list(TestBasicString.testList) # copy
+        result[2:4] = ["da", "coolest"]
+        self.assertEqual(result, ["APRIL", "is", "da", "coolest", "month,", "breeding"])
+
     def test_get_length(self):
          self.assertEqual(len(["1","2","3","4","5"]), 5)
 
