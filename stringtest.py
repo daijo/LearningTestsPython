@@ -20,5 +20,8 @@ class TestBasicString(unittest.TestCase):
         self.assertEqual(TestBasicString.testString[6:], "is the cruellest month, breeding")
         self.assertEqual(TestBasicString.testString[13:22], "cruellest")
 
+    def test_slice_invariant(self):
+        self.assertEqual(TestBasicString.testString[:10] + TestBasicString.testString[10:], TestBasicString.testString)
+
 if __name__ == '__main__':
     unittest.main()
