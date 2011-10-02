@@ -41,5 +41,14 @@ class TestBasicString(unittest.TestCase):
             if index == 0: self.assertEqual(item, "APRIL")
             if index == 3: self.assertEqual(item, "cruellest")
 
+    def test_iterator(self):
+        i = iter(TestBasicString.testList)
+        self.assertEqual(i.next(), "APRIL")
+        i.next()
+        self.assertEqual(i.next(), "the")
+
+    def test_join(self):
+        self.assertEqual(''.join(TestBasicString.testList), "APRIListhecruellestmonth,breeding")
+
 if __name__ == '__main__':
     unittest.main()
